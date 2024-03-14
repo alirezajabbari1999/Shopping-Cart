@@ -1,0 +1,50 @@
+.Navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 20px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-logo {
+  color: var(--main-red);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.navbar-menu ul {
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.navbar-menu ul li {
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right .basket-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.navbar-right .basket-number {
+  background-color: var(--white);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: var(--main-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

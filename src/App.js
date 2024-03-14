@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import './custom.css'
+import productContext from './Context/ProductContext';
+import Navbar from './Components/Navbar/Navbar';
+import Main from './Components/Main/Main';
+import AddNotif from './Components/AddNotif/AddNotif';
+import Sidebar from './Components/Sidebar/Sidebar';
 
-function App() {
+
+
+export default function App() {
+  const [showNotif,setShowNotif] = useState(false)
+  const [showSidebar,setShowSidebar] = useState(false)
+  const [basketCount , setBasketCount] = useState(0) // مربوط به عدد کنار سبد خرید
+  const [userShoppingBasket , setUserShoppingBasket] = useState([]) // مربوطبه سبد خریدی که در ساید بار نمایش داده میشه
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <productContext.Provider value={{
+      showNotif,
+      setShowNotif,
+      showSidebar,
+      setShowSidebar,
+      basketCount,
+      setBasketCount,
+      userShoppingBasket,
+      setUserShoppingBasket
+    }}>
+      <div>
+        <Navbar />
+        <Main />
+        <AddNotif />
+        <Sidebar />
+      </div>
+    </productContext.Provider>
+  )
 }
 
-export default App;

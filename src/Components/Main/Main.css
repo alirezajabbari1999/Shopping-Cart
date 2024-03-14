@@ -1,0 +1,17 @@
+.main-container{
+
+}
+
+.main-title{
+  color: var(--main-red);
+  font-weight: 700;
+  margin: 35px 0;
+  text-align: center;
+}
+
+.main-container .products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

@@ -1,0 +1,51 @@
+.sidebar-container{
+  background-color: var(--white);
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  z-index: 99999;
+  box-shadow: 0 0 5px 3px rgba(0,0,0,.3);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition: all .5s;
+}
+
+.sidebar-container.show{
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.sidebar-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.sidebar-title .left{
+  display: flex;
+  align-items: center;
+  
+}
+
+.sidebar-title .left .basket-icon{
+  font-size: 20px;
+}
+
+.sidebar-title .left .title{
+  font-weight: 600;
+}
+
+.sidebar-title .right{
+
+}
+
+.sidebar-title .right .close-icon{
+  font-size: 25px;
+  cursor: pointer;
+}

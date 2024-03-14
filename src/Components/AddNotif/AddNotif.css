@@ -1,0 +1,23 @@
+.notif{
+  background-color: blue;
+  color: var(--white);
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  opacity: 0;
+  visibility: hidden;
+}
+.notif.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-notif-icon{
+  cursor: pointer
+}
